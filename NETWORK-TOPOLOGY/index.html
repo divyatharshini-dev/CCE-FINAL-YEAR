@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Network Topology | Infrastructure Overview</title>
+<style>
+  body { font-family: 'Segoe UI', Arial, sans-serif; background-color: #f1f5f9; color: #0f172a; margin: 0; padding: 0; text-align: center; }
+  header { background-color: #0f172a; color: white; padding: 25px 0; }
+  header h1 { margin: 0; font-size: 26px; letter-spacing: 1px; }
+  header p { margin: 5px 0 0; color: #94a3b8; font-size: 14px; }
+  .container { padding: 30px 15px; }
+  .box { background: white; border: 1px solid #cbd5e1; border-left: 5px solid #2563eb; padding: 16px; border-radius: 8px; display: inline-block; width: 220px; margin: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); text-align: left; }
+  .box h3 { margin: 0 0 5px; font-size: 16px; color: #1e293b; }
+  .box p { margin: 0; font-size: 13px; color: #64748b; }
+  .line { color: #2563eb; font-size: 20px; margin: 2px 0; }
+  .row { display: flex; justify-content: center; flex-wrap: wrap; gap: 15px; margin-top: 10px; }
+  .section-title { margin-top: 35px; font-size: 20px; color: #0f172a; font-weight: 700; }
+  .section-sub { color: #64748b; font-size: 14px; margin-top: 5px; }
+  .topo-card { background: white; border: 1px solid #cbd5e1; border-radius: 10px; width: 260px; padding: 20px; text-align: left; box-shadow: 0 2px 10px rgba(0,0,0,0.08); }
+  .topo-card h3 { margin: 0; color: #2563eb; font-size: 18px; }
+  .topo-card .diagram { background: #f8fafc; border: 1px dashed #94a3b8; border-radius: 8px; padding: 15px; text-align: center; font-family: monospace; font-size: 13px; line-height: 1.6; margin: 12px 0; color: #334155; white-space: pre; }
+  .topo-card p { font-size: 13px; color: #475569; line-height: 1.5; margin: 0; }
+  .badge { display: inline-block; font-size: 11px; background: #dcfce7; color: #166534; padding: 3px 8px; border-radius: 20px; margin-top: 10px; font-weight: 600; }
+  .badge2 { background: #fef9c3; color: #854d0e; }
+  .badge3 { background: #dbeafe; color: #1e40af; }
+  footer { margin-top: 40px; padding: 15px; background: #e2e8f0; font-size: 13px; color: #475569; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>NETWORK TOPOLOGY</h1>
+  <p>College Network Infrastructure Overview</p>
+</header>
+
+<div class="container">
+
+  <div class="box"><h3>Internet Service Provider</h3><p>WAN Connection | ISP Gateway</p></div>
+  <div class="line">|</div>
+  <div class="box"><h3>Main Router</h3><p>IP: 192.168.1.1 | Gateway</p></div>
+  <div class="line">|</div>
+  <div class="box"><h3>Core Switch</h3><p>24-Port Managed Switch</p></div>
+  <div class="line">|</div>
+
+  <div class="section-title">Connected Devices</div>
+  <div class="row">
+    <div class="box"><h3>Lab 01 - Workstation</h3><p>PC - 01 | 192.168.1.11</p></div>
+    <div class="box"><h3>Lab 02 - Workstation</h3><p>PC - 02 | 192.168.1.12</p></div>
+    <div class="box"><h3>Network Printer</h3><p>Printer | 192.168.1.10</p></div>
+    <div class="box"><h3>File Server</h3><p>Server | 192.168.1.100</p></div>
+  </div>
+
+  <div class="section-title">Types of Network Topology</div>
+  <p class="section-sub">Most commonly used topologies in college & office networks</p>
+
+  <div class="row" style="margin-top:20px;">
+    <div class="topo-card">
+      <h3>1. Star Topology</h3>
+      <div class="diagram">      [Switch]
+     /   |   \
+  [PC1] [PC2] [PC3]</div>
+      <p>All devices connect to a central Switch. If one PC fails, others still work. Most used in colleges.</p>
+      <span class="badge">Most Reliable | Used in Our Lab</span>
+    </div>
+
+    <div class="topo-card">
+      <h3>2. Bus Topology</h3>
+      <div class="diagram">[PC1] - [PC2] - [PC3]
+
+  Single Main Cable</div>
+      <p>All devices share one main cable. Cheap but if main cable breaks, full network stops.</p>
+      <span c…
